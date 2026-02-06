@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Product Feedback</h1>
+        <p>Analyze the sentiment of your feedback</p>
+        <form id="feedback-form">
+            <textarea id="feedback-text" placeholder="Enter your feedback here..."></textarea>
+            <div class="rating">
+                <label for="rating-input">Rate the product (1-5):</label>
+                <input type="number" id="rating-input" min="1" max="5">
+            </div>
+            <button type="submit">Analyze</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
