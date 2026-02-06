@@ -9,16 +9,26 @@
 <body>
     <div class="container">
         <h1>Product Feedback</h1>
-        <p>Analyze the sentiment of your feedback</p>
+        <p>Select a product and leave your review.</p>
         <form id="feedback-form">
+            <div class="product-selector">
+                <label for="product-select">Choose a product:</label>
+                <select id="product-select" name="product">
+                    <option value="motors">Motors</option>
+                    <option value="esc-controller">ESC Controller</option>
+                    <option value="remote-controller">Remote Controller</option>
+                    <option value="transmitter">Transmitter</option>
+                </select>
+            </div>
             <textarea id="feedback-text" placeholder="Enter your feedback here..."></textarea>
             <div class="rating">
                 <label for="rating-input">Rate the product (1-5):</label>
-                <input type="number" id="rating-input" min="1" max="5">
+                <input type="number" id="rating-input" min="1" max="5" required>
             </div>
-            <button type="submit">Analyze</button>
+            <button type="submit">Submit Review</button>
         </form>
         <div id="result"></div>
+        <a href="/summary" class="nav-link">View Summaries</a>
     </div>
     <script src="/static/script.js"></script>
 </body>
