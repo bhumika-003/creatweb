@@ -1,67 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 body {
-    font-family: sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    color: #fff;
 }
 
 .container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     text-align: center;
+    width: 90%;
+    max-width: 500px;
 }
 
 h1 {
+    font-weight: 600;
     margin-bottom: 10px;
 }
 
 p {
-    color: #666;
-    margin-bottom: 20px;
+    font-weight: 300;
+    margin-bottom: 30px;
 }
 
 textarea {
     width: 100%;
-    height: 100px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    margin-bottom: 10px;
+    height: 120px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    resize: none;
+}
+
+textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .rating {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 label {
-    margin-right: 10px;
+    margin-right: 15px;
+    font-weight: 400;
 }
 
 input[type="number"] {
-    width: 50px;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+    width: 60px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    text-align: center;
 }
 
 button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
+    background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+    color: #fff;
+    padding: 15px 30px;
     border: none;
-    border-radius: 3px;
+    border-radius: 50px;
     cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
 }
 
 #result {
-    margin-top: 20px;
-    font-weight: bold;
+    margin-top: 30px;
+    font-weight: 400;
+    font-size: 1.1em;
+}
+
+#result .positive {
+    color: #a7f3d0;
+}
+
+#result .negative {
+    color: #fca5a5;
+}
+
+#result .neutral {
+    color: #fde68a;
 }
