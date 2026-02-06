@@ -107,10 +107,10 @@ async def summarize_product_reviews(product_name: str):
 @app.get("/products")
 async def get_products():
     """
-    Returns a list of distinct product names from the summaries table.
+    Returns a list of distinct product names from the reviews table using RPC function.
     """
     try:
-        response = supabase.table('summaries').select('product_name').execute()
+        response = supabase.rpc('get_distinct_products', {}).execute()
         products = [item['product_name'] for item in response.data]
         return {"products": products}
     except Exception as e:
