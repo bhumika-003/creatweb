@@ -4,7 +4,7 @@ const ratingInput = document.getElementById('rating-input');
 const resultDiv = document.getElementById('result');
 
 // The API is now on your backend
-const apiUrl = 'http://127.0.0.1:8000/analyze-sentiment';
+const apiUrl = 'https://creatweb-8kd2.onrender.com/analyze-sentiment';
 
 feedbackForm.addEventListener('submit', async (e) => {
     e.preventDefault();

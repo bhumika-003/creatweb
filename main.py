@@ -3,8 +3,12 @@ from pydantic import BaseModel
 import requests
 import os
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 
 app = FastAPI()
+
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # Configure CORS
 app.add_middleware(
@@ -37,5 +41,5 @@ async def analyze_sentiment(feedback: Feedback):
         return {"error": str(e)}
 
 @app.get("/")
-def read_root():
-    return {"message": "Sentiment analysis API is running."}
+async def read_index():
+    return FileResponse('static/index.html')
